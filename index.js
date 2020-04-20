@@ -33,10 +33,10 @@ const allowedNetworks = ['VISA','MASTERCARD'];
 const allowedAuthMethods = ['PAN_ONLY','CRYPTOGRAM_3DS'] ;
 
 const baseCardPaymentMethod = {
-  type: 'CARD',
+    type: 'CARD',
   parameters: {
-    allowedCardNetworks: allowedNetworks,
-    allowedAuthMethods: allowedAuthMethods 
+    allowedCardNetworks: ['VISA','MASTERCARD'],
+    allowedAuthMethods: ['PAN_ONLY','CRYPTOGRAM_3DS']
   }
 };
 
@@ -59,12 +59,23 @@ let googlePayClient;
  * Google Pay. This function is executed when the Google Pay library script has
  * finished loading.
  */
-function onGooglePayLoaded() {
-  
-  // Initialize the client and determine readiness to pay with Google Pay:
-  // 1. Instantiate the client using the 'TEST' environment.
-  // 2. Call the isReadyToPay method passing in the necessary configuration.
 
+
+function onGooglePayLoaded() {
+  googlePayClient = new google.payments.api.PaymentsClient({
+    environment: 'TEST'
+  });
+
+  googlePayClient.isReadyToPay(googlePayBaseConfiguration)
+  .then(function(response) {
+    if(response.result) {
+      createAndAddButton();
+    } else {
+      alert("Unable to pay using Google Pay");
+    }
+  }).catch(function(err) {
+    console.error("Error determining readiness to use Google Pay: ", err);
+  });
 }
 
 /**
@@ -73,12 +84,23 @@ function onGooglePayLoaded() {
  * 'buy-now'.
  */
 function createAndAddButton() {
+    const googlePayButton = googlePayClient.createButton({
 
+    // currently defaults to black if default or omitted
+    buttonColor: 'default',
+
+    // defaults to long if omitted
+    buttonType: 'long',
+
+    onClick: onGooglePaymentsButtonClicked
+  });
+
+  document.getElementById('buy-now').appendChild(googlePayButton);
   // TODO: Create Google Pay button andd add it to the DOM.
 
   // TODO: Add the button to the DOM
-  // googlePayButton.setAttribute('id', 'google-pay-button');
-  // domId('buy-now').appendChild(googlePayButton);
+  googlePayButton.setAttribute('id', 'google-pay-button');
+  domId('buy-now').appendChild(googlePayButton);
   
 }
 
@@ -95,9 +117,78 @@ function onGooglePaymentsButtonClicked() {
   // 3. Add information about the merchant.
   // 4. Call loadPaymentData.
 
+  // Tokenization Specification determines how the payment method selected by your customers is handled and used to complete a transaction
+  const tokenizationSpecification = {
+    type: 'PAYMENT_GATEWAY',
+    parameters: {
+      gateway: 'example',
+      gatewayMerchantId: 'gatewayMerchantId'
+    }
+  };
+
+  // details about the information that you need to request in order to successfully place the transaction
+  const cardPaymentMethod = {
+    type: 'CARD',
+    tokenizationSpecification: tokenizationSpecification,
+    parameters: {
+      allowedCardNetworks: ['VISA','MASTERCARD'],
+      allowedAuthMethods: ['PAN_ONLY','CRYPTOGRAM_3DS'],
+      billingAddressRequired: true,
+      billingAddressParameters: {
+        format: 'FULL',
+        phoneNumberRequired: true
+      }
+    }
+  };
+
+  // contains an object with financial details about the transaction: price, currency code (ISO 4217 alpha format), status of the price, which can be either final or estimated
+  const transactionInfo = {
+    totalPriceStatus: 'FINAL',
+    totalPrice: '123.45',
+    currencyCode: 'USD'
+  };
+
+  // Merchant Info includes Merchant ID and Merchant Name
+  const merchantInfo = {
+    // merchantId: '01234567890123456789', Only in PRODUCTION
+    merchantName: 'Example Merchant Name'
+  };
+
+  // Merging the PaymentDataRequest config (allowedPaymentMethods, trabnsactionInfo, merchantInfo)
+  const paymentDataRequest = Object.assign({}, googlePayBaseConfiguration, {
+    allowedPaymentMethods: [cardPaymentMethod],
+    transactionInfo: transactionInfo,
+    merchantInfo: merchantInfo   
+  });
+
+  // Ask the Google Pay API for a valid form of payment
+  googlePayClient
+  .loadPaymentData(paymentDataRequest)
+  .then(function(paymentData) {
+    processPayment(paymentData);
+  }).catch(function(err) {
+    // Log error: { statusCode: CANCELED || DEVELOPER_ERROR }
+  });
+
 }
 
 function sendPayloadToProcessor(googlePayPayload) {
   // Send a POST request to your processor with the payload
   // https://us-central1-devrel-payments.cloudfunctions.net/google-pay-server 
 }
+
+// function processPayment(paymentData) {
+//     // TODO: Send a POST request to your processor with the payload
+//     // https://us-central1-devrel-payments.cloudfunctions.net/google-pay-server 
+//     // Sorry, this is out-of-scope for this codelab.
+//     return new Promise(function(resolve, reject) {
+//       // @todo pass payment token to your gateway to process payment
+//       const paymentToken = paymentData.paymentMethodData.tokenizationData.token;
+//       console.log('mock send token ' + paymentToken + ' to payment processor');
+//       setTimeout(function() {
+//         console.log('mock response from processor');
+//         alert('done');
+//         resolve({});
+//       }, 800);
+//     });
+//   }
