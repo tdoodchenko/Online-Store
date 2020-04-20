@@ -1,0 +1,29 @@
+[
+    {
+      "name":"Ladies+Chrome+T-Shirt",
+      "title":"Ladies Chrome T-Shirt",
+      "category":"ladies_tshirts",
+      "price":13.30,
+      "description":"The best of three fabrics combined into one seductively-soft tee.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;50% polyester, 25% combed and ring-spun cotton, 25% rayon.&lt;/li&gt;&lt;li&gt;Side-seamed.&lt;/li&gt;&lt;li&gt;Semi-relaxed fit.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Available in heather blue with the white Google Chrome logo screenprinted at center chest.&amp;nbsp;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
+      "image":"data/images/10-23180B.jpg",
+      "largeImage":"data/images/10-23180A.jpg"
+    },
+    {
+      "name":"Ladies+Google+New+York+T-Shirt",
+      "title":"Ladies Google New York T-Shirt",
+      "category":"ladies_tshirts",
+      "price":18.35,
+      "description":"Are you feeling lucky? Inspired by city lights in The Big Apple, this tee features the 'I'm Feeling Lucky New York' phrase at back.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;100% cotton.&lt;/li&gt;&lt;li&gt;American Apparel shirt designed with a ladies fit in mind.&lt;/li&gt;&lt;li&gt;Available in Black with the Google logo and 'I'm Feeling Lucky' New York printed on back yoke in White.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Sizing runs smaller than normal. Please reference size chart before ordering.&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
+      "image":"data/images/10-23226B.jpg",
+      "largeImage":"data/images/10-23226A.jpg"
+    },
+    {
+      "name":"Ladies+Gmail+T-Shirt",
+      "title":"Ladies Gmail T-Shirt",
+      "category":"ladies_tshirts",
+      "price":16.40,
+      "description":"Show your inbox some love. The new Gmail tee has arrived, complete with a subtle Mvelope design that showcases all of the Gmail icons you use on the daily.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;50% polyester, 25% cotton.&lt;/li&gt;&lt;li&gt;Bella+Canvas.&lt;/li&gt;&lt;li&gt;Available in vintage red with the new Gmail print screenprinted across center chest.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
+      "image":"data/images/10-23179B.jpg",
+      "largeImage":"data/images/10-23179A.jpg"
+    }
+]
