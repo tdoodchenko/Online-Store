@@ -1,10 +1,10 @@
 [
   {
-    "name":"YouTube+Organic+Cotton+T-Shirt+-+Grey",
-    "title":"YouTube Organic Cotton T-Shirt - Grey",
+    "name":"a+thing+i+put+here",
+    "title":"thing is here",
     "category":"mens_tshirts",
     "price":14.75,
-    "description":"Stay casual and cool in this 100% organic pre-shrunk cotton T-shirt. Available in charcoal grey with full-color YouTube logo screened on front.",
+    "description":"description of the thing goes here.",
     "image":"data/images/product_1.jpg",
     "largeImage":"data/images/product_1.jpg"
   },
