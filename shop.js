@@ -45,7 +45,7 @@ const GLOBAL_RAM_CACHE = {};
  * @const {array}
  */
 const SHIRT_OPTIONS = [
-  '/data/ladies_tshirts.json', '/data/mens_tshirts.json'];
+  './data/ladies_tshirts.json', './data/mens_tshirts.json'];
 
 /**
  * Takes care of loading the t-shirt directory from the files attached, or
