@@ -1,0 +1,56 @@
+[
+  {
+    "name":"Pineapple+floaty",
+    "title":"Pineapple Floaty",
+    "category":"ladies_tshirts",
+    "price":13.30,
+    "description":"Fun in the sun. You'll probably pass out trying to blow air into this and it's made of the cheapest plastic so it will likely be garbage after a couple hours of use. Hope you can swim!",
+    "image":"data/images/product_7.jpg",
+    "largeImage":"data/images/product_7.jpg"
+  },
+  {
+    "name":"Pizza+Slice+Pin",
+    "title":"Pizza Slice Pin",
+    "category":"ladies_tshirts",
+    "price":19.00,
+    "description":"Yeah it is cute and you know you want it... but by the time the package arrives in the mail you'll have realized you have nothing to put it on and how stupid it is spending 19 bucks on a pin shaped like pizza",    
+    "image":"data/images/product_8.jpg",
+    "largeImage":"data/images/product_8.jpg"
+  },
+  {
+    "name":"Flamingo+Floaty",
+    "title":"Flamingo Floaty",
+    "category":"ladies_tshirts",
+    "price":16.40,
+    "description":"If the 'child inside' is actually all you really are, then blow your money on this big pink flamingo floaty. Maybe you can think about getting your life together while you get sun-stroke on it.",    
+    "image":"data/images/product_9.jpg",
+    "largeImage":"data/images/product_9.jpg"
+  },
+  {
+    "name":"Purpe+Stone+necklace",
+    "title":"Purple Stone Necklace - Purple + Silver",
+    "category":"ladies_tshirts",
+    "price":213.30,
+    "description":"Do you want to feel centered and at peace? Then let everyone know your freaking nuts with this stunning purple stone necklace. It's sure to make you feel so zen... and broke!",    
+    "image":"data/images/product_10.jpg",
+    "largeImage":"data/images/product_10.jpg"
+  },
+  {
+    "name":"Headphones",
+    "title":"Headphones",
+    "category":"ladies_tshirts",
+    "price":19.10,
+    "description":"Let everyone on the bus know what you are listening to with these huge and cheap headphones. I am sure they won't be annoyed.",    
+    "image":"data/images/product_11.jpg",
+    "largeImage":"data/images/product_11.jpg"
+  },
+  {
+    "name":"Watches",
+    "title":"Wrist Watches",
+    "category":"ladies_tshirts",
+    "price":129.10,
+    "description":"They'll break within a week, but it's just for show anyways... right?",    
+    "image":"data/images/product_12.jpg",
+    "largeImage":"data/images/product_12.jpg"
+  }
+]

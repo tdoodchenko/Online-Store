@@ -1,0 +1,56 @@
+[
+  {
+    "name":"Anchor+Bracelet",
+    "title":"Anchor Bracelet - Black + Gold",
+    "category":"mens_tshirts",
+    "price":14.75,
+    "description":"Stay anchored down with this stunning bracelet.",
+    "image":"data/images/product_1.jpg",
+    "largeImage":"data/images/product_1.jpg"
+  },
+  {
+    "name":"Beaded+Bracelet",
+    "title":"Beaded Bracelet - Black",
+    "category":"mens_tshirts",    
+    "price":17.05,
+    "description":"Need more crap to put around your wrist? Here is another bracelet to waste money on",
+    "image":"data/images/product_2.jpg",
+    "largeImage":"data/images/product_2.jpg"
+  },
+  {
+    "name":"Ladies+Handbag",
+    "title":"Ladies Red Handbag",
+    "category":"mens_tshirts",    
+    "price":124.95,
+    "description":"Want to look cute and stand out? What better way than with a bright-ass red handbag. You can even put stuff in it!",
+    "image":"data/images/product_3.jpg",
+    "largeImage":"data/images/product_3.jpg"
+  },
+  {
+    "name":"Beard+Oil",
+    "title":"Beard Oil - Old Spice and Rum Scented",
+    "category":"mens_tshirts",    
+    "price":15.8,
+    "description":"In a long list of meaningless ways to spend your money, this delicious smelling beard oil is right up there. Smell like a drunk sailor and look like a greasy hipster lumberjack.",
+    "image":"data/images/product_4.jpg",
+    "largeImage":"data/images/product_4.jpg"
+  },
+  {
+    "name":"Phone+Case",
+    "title":"Phone Case",
+    "category":"mens_tshirts",
+    "price":16.9,
+    "description":"Don't drop your over-priced Iphone, and if you do you'll want to have been using one of these beautiful phone cases... Your crappy phone surely won't survive without it!",
+    "image":"data/images/product_5.jpg",
+    "largeImage":"data/images/product_5.jpg"
+  },
+  {
+    "name":"Wrist+Watch",
+    "title":"Wrist Watch - Tan + Gold",
+    "category":"mens_tshirts",    
+    "price":115.7,
+    "description":"Tell time the old fashion way like granny and gramps... of course this piece a crap isn't built with half the integrity of the time-telling pieces of the past, but you'll look good and it's not like you know how to read a clock anyway.",
+    "image":"data/images/product_6.jpg",
+    "largeImage":"data/images/product_6.jpg"
+  }
+]
